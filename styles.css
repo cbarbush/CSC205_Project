@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;900&family=Orbitron:wght@400;500;600;700;800&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat";
+    color: #333;
+}
+
+.headtext {
+    position: absolute;
+    left: 8vw;
+}
+
+span {
+    font-family: "Orbitron";
+    color: #fff;
+    font-weight: 900;
+    font-size: 3vw;
+    width: 5px;
+    text-align: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 5vw;
+    filter: drop-shadow(10px 10px 10px #000);
+}
+
+.navlink {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+.navlink:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.hL {
+    float: left;
+}
+
+.navlist {
+    border-radius: 20px;
+    position: fixed;
+    top: 30%;
+    right: 20px;
+    background-color: #888;
+    list-style: none;
+    filter: drop-shadow(3px 3px 5px #000);
+}
+
+
+header {
+    background: url(assets/header.webp) no-repeat 20%;
+    height: 13vw;
+    background-size: cover;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.content-container {
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.left-col {
+    width: 60%;
+    padding: 15px 20px;  
+}
+
+.right-col {
+    width: 40%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #555;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h2 {
+    display: inline-flex;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-bottom: solid 1px black;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+section {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    margin-top: 50px;
+    border: 10px solid;
+    border-image: linear-gradient(to right, #374e64, #888);
+    border-image-slice: 1;
+    border-image-width: 20px;
+}
+
+#content-list{
+    list-style: disc;
+}
+
+.cfop-list {
+    list-style: none;
+}
+
+strong {
+    color: #222;
+}
+
+footer {
+    clear: both;
+    background-color: #888;
+    padding: 14px 20px;
+}
+
+footer p {
+    color: #fff;
+}
+
+.eventTables {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+tr:nth-child(even) {
+    background-color: #8899aa;
+}
+
+tr:nth-child(even) td {
+    color: white;
+}
+
+tr:nth-child(odd) td {
+    color: black;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+table {
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+#wcaP {
+    text-align: center;
+}
+.cfop-list{
+    justify-content: center;
+    display: flex;
+}
+
+.cfop-list li {
+    border: 1.5px solid #333;
+    padding: 5px;
+    text-align: center;
+}
+
+#wcaLink {
+    text-decoration: underline;
+    color: #555;
+}
+
+#wcaLink:hover {
+    color: #999;
+}
+
+th {
+    background-color: #888;
+    color: #eee;
+    font-size: 1.1rem;
+}
