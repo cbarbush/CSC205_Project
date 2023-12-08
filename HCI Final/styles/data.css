@@ -3,7 +3,11 @@
     padding: 0;
 }
 
-.content-container {
+body {
+    background-color: #ccc !important;
+}
+
+.data-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,6 +34,10 @@ h1 {
     display: flex;
 }
 
+.disabled {
+    display: none;
+}
+
 p {
     margin-right: 20px; 
 }
@@ -40,3 +48,33 @@ p {
     margin-bottom: 15px;
     text-align: center;
 }
+
+.tt {
+    padding: 5px;
+    max-width: 250px;
+    text-wrap: balance;
+
+}
+
+
+
+/* Code for spinner taken from CodePen: https://codepen.io/thelaazyguy/pen/QMNxMM */
+.box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 100px;
+    height: 100px;
+    border: 5px solid #777;
+    border-top: 5px solid #e3f2fd;
+    border-radius: 50%;
+    margin-top: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin{
+    to{
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
