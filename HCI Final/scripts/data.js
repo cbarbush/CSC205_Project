@@ -33,6 +33,7 @@ function updateTooltip(seriesIndex, dataPointIndex, questions) {
   return `<span class="tt">${questionNumber}. ${question ? question.Question : 'No question found'}</span>`;
 }
 
+const chartDiv = document.querySelector("#chart1");
 // function to run when team is selected from drop down box
 function selectTeam() {
   var teamSelect = document.getElementById("team");
@@ -49,8 +50,10 @@ const teamElement = document.getElementById("team");
 if (teamElement) {
   teamElement.addEventListener("change", function () {
     console.log("Selection changed.")
+    
     const accessLevel = parseInt(sessionStorage.getItem("accessLevel"));
-
+    chartDiv.classList.add("chartHide");
+    preloader.classList.remove("disabled");
     // if statement for assistant page
     if (accessLevel === 3 && window.location.pathname.includes('assistant.html')) {
       selectTeam();
@@ -322,7 +325,8 @@ async function renderCharts() {
                 from: 0,
                 to: 0.9,
                 name: 'Poor',
-                color: '#b3cde0'
+                color: '#b3cde0', 
+                foreColor: '#000'
               },
               {
                 from: 1.0,
@@ -368,12 +372,12 @@ async function renderCharts() {
         }
       }
   }
-
+  preloader.classList.add("disabled") // disable the spinner
+  chartDiv.classList.remove("chartHide") 
   // check if chart exists
   if (!chart1) {
     chart1 = new ApexCharts(document.querySelector('#chart1'), options1);
     chart1.render();
-    preloader.classList.add("disabled") // disable the spinner
   } 
   // if the chart exists, update the data instead of rendering a new one
   else {

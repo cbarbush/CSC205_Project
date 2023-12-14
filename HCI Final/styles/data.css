@@ -24,6 +24,13 @@ body {
 
 .chart {
     width: 1000px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.chartHide {
+    opacity: 0;
+    visibility: hidden;
 }
 
 h1 {
@@ -78,3 +85,5 @@ p {
       transform: translate(-50%, -50%) rotate(360deg);
     }
   }
+
+
